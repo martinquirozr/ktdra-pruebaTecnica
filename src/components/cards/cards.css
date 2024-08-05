@@ -1,13 +1,30 @@
-.cards{
+/* CARD CONTAINER GENERAL */
 
+.cards_container{
+display: flex;
+
+}
+
+
+
+
+
+.cards{
 /* background-color: red;   */
-width: 100vw; 
+width: 70%; 
 display: flex;
 align-items: center;
 justify-content: center;
 flex-wrap: wrap;
 }
 
+.favorites{
+    /* background-color: red; */
+    width: 30%;
+    height: 100vh;
+    border: 0.1rem  solid #ccc; 
+
+}
 
 
 .card{
@@ -73,3 +90,5 @@ flex-wrap: wrap;
     all:unset;
     cursor: pointer;
 }
+
+
