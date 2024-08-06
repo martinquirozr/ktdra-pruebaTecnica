@@ -20,7 +20,7 @@ function SearchBar({ onSearch }) {
   };
 
   return (
-    <div>
+    <div className='search_bar'>
       <input
         className='sb_input'
         type="text"

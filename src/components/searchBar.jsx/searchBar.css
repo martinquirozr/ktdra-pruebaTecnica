@@ -1,8 +1,12 @@
-.sb_input{
+.search_bar{
+    margin: 0.5rem 0;
+}
 
+.sb_input{
 width:80vw;
-border: 0.1rem  solid #ccc; 
-border-radius: 0.45rem; 
+border: 0.15rem  solid #ccc; 
+border-radius: 0.6rem; 
 padding: 0.5rem; 
 font-size: 1rem; 
+
 }

@@ -20,7 +20,6 @@ let addToFavorites = (character)=>{
             return newFavorites.slice(0,-1);
         })
     }
- 
 }
 
   return (
@@ -38,13 +37,8 @@ let addToFavorites = (character)=>{
 
                     <Card key={fav.id} character ={fav} addToFavorites={addToFavorites}></Card>
 
-
-
-
                 ))}
               </div>
-
-
          </div>
 
 
@@ -68,7 +62,7 @@ function Card ({character,addToFavorites}){
 
                     // TRUEE
                 // Empieza Card Plus Mode
-        <div className='card_plus'>
+        <div className='card'>
 
         <div className='card_containerInfo'>
             <h3>{character.name}</h3>

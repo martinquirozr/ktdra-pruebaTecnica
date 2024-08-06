@@ -42,11 +42,14 @@ function App() {
 
   return (
     <CharacterContext.Provider value={{ characters }}>
-      <h1>Rick & Morty APP</h1>
+      <header><h1>Rick & Morthy APP</h1></header>
       <SearchBar onSearch={searchCharacters} />
-      <div>
+      <div className='cards_container'>
         <Cards />
       </div>
+      <footer>
+        <p> By Martin Quiroz - 2024</p>
+      </footer>
     </CharacterContext.Provider>
   );
 }
