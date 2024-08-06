@@ -1,18 +1,18 @@
-// src/components/cards/cards.jsx
 import React,{useState} from 'react';
 import { useCharacters } from '../../App';
 import './cards.css'
 
 
 
+
 function Cards() {
   const { characters } = useCharacters();
   const [favorites,setFavorites] = useState([])
-  console.log ('Characters en Cards',characters)
+
 
 //   Función para agregar un personaje a favoritos
 let addToFavorites = (character)=>{
-    if(favorites.length<5){
+    if(favorites.length<=4){
         setFavorites((prevFavorites)=>[character,...prevFavorites]);
     }else if(favorites.length >= 5){
         setFavorites(prevFavorites =>{
@@ -34,13 +34,11 @@ let addToFavorites = (character)=>{
             <div className='favorites_list'>
                 {favorites.map((fav) => (
 
-
                     <Card key={fav.id} character ={fav} addToFavorites={addToFavorites}></Card>
 
                 ))}
               </div>
          </div>
-
 
     </div>
 
@@ -59,9 +57,7 @@ function Card ({character,addToFavorites}){
 
             {plusMode ? (
 
-
-                    // TRUEE
-                // Empieza Card Plus Mode
+                // TRUE - Empieza Card Plus Mode
         <div className='card'>
 
         <div className='card_containerInfo'>
@@ -88,7 +84,7 @@ function Card ({character,addToFavorites}){
                 <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
                 </svg>
                 </button>
-                <button className='card_button'>
+                <button onClick={()=>addToFavorites(character)}  className='card_button'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
                     <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
                     </svg>
@@ -99,8 +95,7 @@ function Card ({character,addToFavorites}){
     //Termina Card Plus Mode
 
                 ) : (
-                    // FALSE
-                    // Empieza Card Normal
+                    // FALSE - Empieza Card Normal
         <div className='card'>
         <div className='card_containerImg'>
             <img className='card_img' src={character.image} alt={character.name}></img>
@@ -127,7 +122,6 @@ function Card ({character,addToFavorites}){
         </div>
     </div>
     //Termina Card Normal
-
 
 
      ) }

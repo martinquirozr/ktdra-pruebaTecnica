@@ -1,4 +1,4 @@
-/* CARD CONTAINER GENERAL */
+/* Estilos Componente Cards*/
 
 .cards_container{
 display: flex;
@@ -6,13 +6,13 @@ margin: 0.5rem 0;
 
 }
 
+
+
 .cards{
-/* background-color: red; */
 width: 70%; 
-/* min-width: 70%; */
 height: 100vh;
 display: flex;
-align-items: center;
+align-items: flex-start;
 justify-content: center;
 flex-wrap: wrap;
 overflow-y: auto;  
@@ -34,6 +34,7 @@ overflow-y: auto;
 
 }
 
+/* Estilos Componente Card */
 
 .card_containerInfo-plus{
     width: 100%;
@@ -91,7 +92,6 @@ overflow-y: auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
-
 }
 
 .card_button{
@@ -123,14 +123,8 @@ overflow-y: auto;
 @media (max-width:1330px){
 
     .card{
-        display: flex;
-        margin: 1rem;
-        background-color: #3C3E44;
-        color: white;
         height: 8rem;
-        width: 20rem;
-        border-radius: 0.8rem;
-        overflow: hidden;
+        width: 20rem;  
     }
     
   }
@@ -139,28 +133,13 @@ overflow-y: auto;
 @media (max-width:1265px){
 
     .card{
-        display: flex;
-        margin: 1rem;
-        background-color: #3C3E44;
-        color: white;
+
         height: 8rem;
         width: 24rem;
-        border-radius: 0.8rem;
-        overflow: hidden;
     }
 
     .favorites{
-        margin-top: 1rem;
-        color: white;
-        background-color:#ccc;
-        border-radius: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 30%;
-        min-width: 27rem;
-        height: 100%; 
-    
+        min-width: 27rem;  
     }
     
   }

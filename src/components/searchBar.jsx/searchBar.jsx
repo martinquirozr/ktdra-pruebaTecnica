@@ -1,4 +1,3 @@
-// src/components/searchBar.jsx/searchBar.js
 import './searchBar.css';
 import React, { useState, useEffect } from 'react';
 
@@ -9,7 +8,8 @@ function SearchBar({ onSearch }) {
   useEffect(() => {
     const debounceSearch = setTimeout(() => {
       onSearch(query);
-    },150); //
+    },400); //
+      // Este codigo evita que se hagan llamadas excesivas en el onSearch,llamandola solo cuando el usuario ha dejado de escribir por un tiempo de 400ms ( Este tiempo se puede cambiar a consideración)
 
     return () => clearTimeout(debounceSearch); 
   }, [query]);
@@ -18,6 +18,7 @@ function SearchBar({ onSearch }) {
   const handleChange = (e) => {
     setQuery(e.target.value);
   };
+
 
   return (
     <div className='search_bar'>
